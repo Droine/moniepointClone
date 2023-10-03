@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background: #cddffc;
+ 
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+.contentSec {
+    width: 100%;
+    padding: 0 1em;
+    background: #cddffc;
+}
+.goBack {
+    display: flex;
+    align-items: center;
+    padding: 2em 0 1em;
+}
+.goBack i {
+    font-size: 1.7em;
+    color: #0361f0;
+}
+.goBack span {
+    margin-left: .78em;
+    font-weight: 600;
+}
+.title {
+    text-align: start;
+    padding-bottom: 1.5em;
+}
+.title h1 {
+    font-size: 1.7em;
+    font-weight: 600;
+    padding-bottom: .8em;
+    color: #353535;
+}
+.title p {
+    font-size: .87em;
+    font-weight: 600;
+    color: #353535;
+}
+
+.formSec {
+    width: 100%;
+    height: 80dvh;
+    background: #fff;
+    border-top-right-radius:1.5em ;
+    border-top-left-radius:1.5em ;
+    padding: 2em 1em;
+}
+/* .input form  {
+    p
+} */
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+form input {
+    width: 1em;
+    height: 1em;
+    outline: none;
+    border-radius: 3px; 
+    font-weight: 900;   
+    font-size: 2em;
+    border: none;
+    background: #cddffc;
+    color: #0361f0;
+    text-align: center;
+}
+
+.input {
+    padding-bottom: .89em;
+}
+.time {
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   font-weight: 600;
+}
+.time p {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #7049F7;
+    margin-left: 0.45em;
+}
+
+.getCodeWrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.getCode {
+    background: #cddffc;
+    width: 100%;
+    height: 4em;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1.1em 0;
+}
+.getCode i{ 
+    color: #0361f0;
+    font-size: 1.2em;
+}
+.getCode span {
+    color: #0361f0;
+    font-weight: 800;
+}
+.buttonSec {
+    display: flex;
+    justify-content: center;
+padding-top: 8em;
+}
+button {
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    font-size:1.2em;
+    font-weight: 600;
+    background: #ccc;
+    color: #5b5858;
+  }
